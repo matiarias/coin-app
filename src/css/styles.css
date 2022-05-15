@@ -1,4 +1,5 @@
 body {
+  overflow: hidden;
   background:linear-gradient(120deg, #852057, #553a99, #6cbc35, #fd9f3e, #08538c) !important;
   }
   .img-logo {
@@ -54,5 +55,5 @@ body {
   }
 
   .google-bg {
-    background-color: #31db3c77;
+    background-color: #7257b8;
   }
