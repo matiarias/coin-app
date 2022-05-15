@@ -11,6 +11,8 @@ const App = () => {
 
     const [coins, setCoins] = useState({ loading: true, datos: [] })
 
+    const [update, setUpdate] = useState(false)
+
     useEffect(() => {
 
         getCoins().then((respuesta) => {
@@ -23,7 +25,7 @@ const App = () => {
             })
 
         });
-    }, []);
+    }, [update]);
 
     return (
 
@@ -50,6 +52,7 @@ const App = () => {
                                     <th>Supply</th>
                                     <th>Volumne (24hr)</th>
                                     <th>Change (24hr)</th>
+                                    <th> <button className='btn-coin' onClick={() => setUpdate(!update)}>Update</button></th>
                                 </tr>
                             </thead>
 
