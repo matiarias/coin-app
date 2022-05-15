@@ -1,5 +1,5 @@
 body {
-  background:linear-gradient(120deg, #d52685, #553a99, #6cbc35, #fd9f3e, #08538c) !important;
+  background:linear-gradient(120deg, #852057, #553a99, #6cbc35, #fd9f3e, #08538c) !important;
   }
   .img-logo {
     width: 140px;
@@ -40,4 +40,15 @@ body {
 
   .img-icon {
     width: 30px;
+  }
+
+  .card-login {
+    display: flex;
+    min-height: 500px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-login img {
+    width: 300px;
   }
