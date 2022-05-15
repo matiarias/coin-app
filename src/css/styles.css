@@ -3,7 +3,7 @@ body {
   }
   .img-logo {
     width: 140px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
   }
   
   .btn-coin {
@@ -51,4 +51,8 @@ body {
 
   .card-login img {
     width: 300px;
+  }
+
+  .google-bg {
+    background-color: #31db3c77;
   }
