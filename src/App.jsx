@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { getCoins } from './helpers/coinFetch'
+import numeral from 'numeral'
 
 import './css/styles.css'
+
 
 const App = () => {
 
@@ -38,6 +40,10 @@ const App = () => {
                                 <th>Name</th>
                                 <th>Price Usd</th>
                                 <th>Market Cap</th>
+                                <th>VWAP (24hs)</th>
+                                <th>Supply</th>
+                                <th>Volumne (24hr)</th>
+                                <th>Change (24hr)</th>
                             </tr>
                         </thead>
 
@@ -46,13 +52,16 @@ const App = () => {
                             {
                                 coins.datos.map((coin) => (
 
-                                    <tr>
-                                        <td>{coin.rank}</td>
+                                    <tr key={coin.id}>
+                                        <td className='text-center'>{coin.rank}</td>
                                         <td>{coin.name}</td>
-                                        <td>{coin.priceUsd}</td>
-                                        <td>{coin.marketCapUsd}</td>
+                                        <td>{numeral(coin.priceUsd).format('$0,0.00')}</td>
+                                        <td>{numeral(coin.marketCapUsd).format('($ 0.00 a)')}</td>
+                                        <td>{numeral(coin.vwap24Hr).format('$0,0.00')}</td>
+                                        <td>{numeral(coin.supply).format('($ 0.00 a)')}</td>
+                                        <td>{numeral(coin.volumeUsd24Hr).format('($ 0.00 a)')}</td>
+                                        <td className={coin.changePercent24Hr > 0 ? 'text-success' : 'text-danger'}>{parseFloat(coin.changePercent24Hr).toFixed(2)}%</td>
                                     </tr>
-
                                 ))
                             }
 

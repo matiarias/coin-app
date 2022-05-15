@@ -1,7 +1,5 @@
 body {
-    background: rgb(255, 255, 255)
-      linear-gradient(to right, rgb(63, 81, 181), rgb(100, 181, 246)) repeat
-      scroll 0% 0% !important;
+  background:linear-gradient(120deg, #d52685, #553a99, #6cbc35, #fd9f3e, #08538c) !important;
   }
   .img-logo {
     width: 30px;
