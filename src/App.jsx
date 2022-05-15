@@ -25,6 +25,7 @@ const App = () => {
     }, []);
 
     return (
+
         <div className='container'>
             <div className="row">
                 <div className="col">
@@ -34,45 +35,53 @@ const App = () => {
 
             <div className="row mt-5">
                 <div className="col">
-                    <table className='table table-coin'>
-                        <thead>
-                            <tr>
-                                <th>Rank</th>
-                                <th>Name</th>
-                                <th>Price Usd</th>
-                                <th>Market Cap</th>
-                                <th>VWAP (24hs)</th>
-                                <th>Supply</th>
-                                <th>Volumne (24hr)</th>
-                                <th>Change (24hr)</th>
-                            </tr>
-                        </thead>
 
-                        <tbody>
+                    {coins.loading ? (<h3 className='text-white text-center'>Cargando Información...</h3>) : (
 
-                            {
-                                coins.datos.map((coin) => (
+                        <table className='table table-coin'>
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Name</th>
+                                    <th>Price Usd</th>
+                                    <th>Market Cap</th>
+                                    <th>VWAP (24hs)</th>
+                                    <th>Supply</th>
+                                    <th>Volumne (24hr)</th>
+                                    <th>Change (24hr)</th>
+                                </tr>
+                            </thead>
 
-                                    <tr key={coin.id}>
-                                        <td className='text-center'>{coin.rank}</td>
+                            <tbody>
 
-                                        <td className='d-flex justify-content-between'>
-                                            <CoinIcon symbol={coin.symbol} />
-                                            {coin.name}
-                                        </td>
+                                {
+                                    coins.datos.map((coin) => (
 
-                                        <td>{numeral(coin.priceUsd).format('$0,0.00')}</td>
-                                        <td>{numeral(coin.marketCapUsd).format('($ 0.00 a)')}</td>
-                                        <td>{numeral(coin.vwap24Hr).format('$0,0.00')}</td>
-                                        <td>{numeral(coin.supply).format('($ 0.00 a)')}</td>
-                                        <td>{numeral(coin.volumeUsd24Hr).format('($ 0.00 a)')}</td>
-                                        <td className={coin.changePercent24Hr > 0 ? 'text-success' : 'text-danger'}>{parseFloat(coin.changePercent24Hr).toFixed(2)}%</td>
-                                    </tr>
-                                ))
-                            }
+                                        <tr key={coin.id}>
+                                            <td className='text-center'>{coin.rank}</td>
 
-                        </tbody>
-                    </table>
+                                            <td className='d-flex justify-content-between'>
+                                                <CoinIcon symbol={coin.symbol} />
+                                                {coin.name}
+                                            </td>
+
+                                            <td>{numeral(coin.priceUsd).format('$0,0.00')}</td>
+                                            <td>{numeral(coin.marketCapUsd).format('($ 0.00 a)')}</td>
+                                            <td>{numeral(coin.vwap24Hr).format('$0,0.00')}</td>
+                                            <td>{numeral(coin.supply).format('($ 0.00 a)')}</td>
+                                            <td>{numeral(coin.volumeUsd24Hr).format('($ 0.00 a)')}</td>
+                                            <td className={coin.changePercent24Hr > 0 ? 'text-success' : 'text-danger'}>{parseFloat(coin.changePercent24Hr).toFixed(2)}%</td>
+                                        </tr>
+                                    ))
+                                }
+
+                            </tbody>
+                        </table>
+
+                    )}
+
+
+
                 </div>
 
             </div>
