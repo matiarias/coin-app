@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { getCoins } from './helpers/coinFetch'
 import numeral from 'numeral'
 import CoinIcon from './components/CoinIcon';
+import LoadingIcon from './components/LoadingIcon';
 
 import './css/styles.css'
 
@@ -36,7 +37,7 @@ const App = () => {
             <div className="row mt-5">
                 <div className="col">
 
-                    {coins.loading ? (<h3 className='text-white text-center'>Cargando Información...</h3>) : (
+                    {coins.loading ? <LoadingIcon /> : (
 
                         <table className='table table-coin'>
                             <thead>
