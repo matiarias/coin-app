@@ -37,3 +37,7 @@ body {
   .text-logo {
     text-align: left;
   }
+
+  .img-icon {
+    width: 30px;
+  }

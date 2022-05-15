@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getCoins } from './helpers/coinFetch'
 import numeral from 'numeral'
+import CoinIcon from './components/CoinIcon';
 
 import './css/styles.css'
 
@@ -54,7 +55,12 @@ const App = () => {
 
                                     <tr key={coin.id}>
                                         <td className='text-center'>{coin.rank}</td>
-                                        <td>{coin.name}</td>
+
+                                        <td className='d-flex justify-content-between'>
+                                            <CoinIcon symbol={coin.symbol} />
+                                            {coin.name}
+                                        </td>
+
                                         <td>{numeral(coin.priceUsd).format('$0,0.00')}</td>
                                         <td>{numeral(coin.marketCapUsd).format('($ 0.00 a)')}</td>
                                         <td>{numeral(coin.vwap24Hr).format('$0,0.00')}</td>

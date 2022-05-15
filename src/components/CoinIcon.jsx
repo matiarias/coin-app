@@ -1,8 +1,13 @@
 import React from 'react'
 
-const CoinIcon = () => {
+const CoinIcon = (props) => {
+
+    const {symbol} = props
+
   return (
-    <div>CoinIcon</div>
+    <div>
+        <img className='img-icon' src={`https://assets.coincap.io/assets/icons/${symbol.toLowerCase()}@2x.png`} alt={symbol} />
+    </div>
   )
 }
 
