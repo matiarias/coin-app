@@ -1,5 +1,5 @@
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
   background:linear-gradient(120deg, #852057, #553a99, #6cbc35, #fd9f3e, #08538c) !important;
   }
   .img-logo {
@@ -56,4 +56,20 @@ body {
 
   .google-bg {
     background-color: #7257b8;
+  }
+
+  .logo-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo-icon img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .img_avatar {
+    width: 40px;
+    border-radius: 100%;
   }

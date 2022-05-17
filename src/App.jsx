@@ -4,6 +4,7 @@ import Error404 from './pages/Error404';
 import Home from './pages/Home';
 import LoginScreen from './pages/LoginScreen';
 import ProtectedRoutes from './routes/ProtectedRoutes';
+import CoinScreen from './pages/CoinScreen';
 
 import "./css/styles.css";
 
@@ -17,6 +18,11 @@ const App = () => {
 
                     </ProtectedRoutes>
                 } />
+                <Route path='coin/:coinId' element={
+                    <ProtectedRoutes>
+                        <CoinScreen />
+                    </ProtectedRoutes>
+                }/>
 
                 <Route path="login" element={<LoginScreen />} />
                 <Route path="*" element={<Error404 />} />

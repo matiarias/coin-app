@@ -5,3 +5,9 @@ export const getCoins = async () => {
     return data
 
 };
+
+export const getCoinId = async (id) => {
+    const resp = await fetch(`https://api.coincap.io/v2/assets/${id}`);
+    const { data } = await resp.json();
+    return data;
+};

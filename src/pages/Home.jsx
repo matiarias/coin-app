@@ -3,6 +3,7 @@ import { getCoins } from "../helpers/coinFetch";
 import numeral from "numeral";
 import CoinIcon from "../components/CoinIcon";
 import LoadingIcon from "../components/LoadingIcon";
+import { Link } from "react-router-dom";
 // import CoinNav from "../CoinNav/components/CoinNav";
 
 const Home = () => {
@@ -12,7 +13,7 @@ const Home = () => {
 
   useEffect(() => {
     getCoins().then((respuesta) => {
-      console.log(respuesta);
+      // console.log(respuesta);
 
       setCoins({
         loading: false,
@@ -64,7 +65,7 @@ const Home = () => {
 
                       <td className="d-flex justify-content-between">
                         <CoinIcon symbol={coin.symbol} />
-                        {coin.name}
+                        <Link className="nav-link" to={`/coin/${coin.id}`} > {coin.name}</Link>
                       </td>
 
                       <td>{numeral(coin.priceUsd).format("$0,0.00")}</td>

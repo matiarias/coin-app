@@ -7,11 +7,13 @@ const CoinNav = () => {
         <nav className='navbar navbar-expand-lg navbar-light bg-light'>
             <div className='container justify-content-between'>
                 <div>
+                    <Link to='/'>
                     <img className='img-logo' src={logo} alt="logoCoin" />
+                    </Link>
                 </div>
 
                 <ul className='navbar-nav mb-2 mb-lg-0'>
-                    <Link className='nav-link active' to='login'> Cerrar Sesión</Link>
+                    <Link className='nav-link active' to='/login'> Cerrar Sesión</Link>
                 </ul>
 
             </div>
