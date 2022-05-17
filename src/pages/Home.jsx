@@ -4,6 +4,7 @@ import numeral from "numeral";
 import CoinIcon from "../components/CoinIcon";
 import LoadingIcon from "../components/LoadingIcon";
 import { Link } from "react-router-dom";
+import CoinPagination from "../components/CoinPagination";
 // import CoinNav from "../CoinNav/components/CoinNav";
 
 const Home = () => {
@@ -11,8 +12,10 @@ const Home = () => {
 
   const [update, setUpdate] = useState(false);
 
+  const [pagina, setPagina] = useState(0)
+
   useEffect(() => {
-    getCoins().then((respuesta) => {
+    getCoins(pagina).then((respuesta) => {
       // console.log(respuesta);
 
       setCoins({
@@ -20,7 +23,7 @@ const Home = () => {
         datos: respuesta,
       });
     });
-  }, [update]);
+  }, [update, pagina]);
 
   return (
     <>
@@ -89,6 +92,8 @@ const Home = () => {
                 </tbody>
               </table>
             )}
+
+            <CoinPagination pagina={pagina} setPagina={setPagina} />
           </div>
         </div>
       </div>

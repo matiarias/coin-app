@@ -7,6 +7,7 @@ import ProtectedRoutes from './routes/ProtectedRoutes';
 import CoinScreen from './pages/CoinScreen';
 
 import "./css/styles.css";
+import "font-awesome/css/font-awesome.css"
 
 const App = () => {
     return (

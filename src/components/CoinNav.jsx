@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../img/coincap.png'
 import { Link } from 'react-router-dom'
+import CoinSearch from './CoinSearch'
 
 const CoinNav = () => {
     return (
@@ -13,6 +14,7 @@ const CoinNav = () => {
                 </div>
 
                 <ul className='navbar-nav mb-2 mb-lg-0'>
+                    <CoinSearch />
                     <Link className='nav-link active' to='/login'> Cerrar Sesión</Link>
                 </ul>
 
