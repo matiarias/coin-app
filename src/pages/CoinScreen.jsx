@@ -26,7 +26,7 @@ const CoinScreen = () => {
         datos: response,
       });
     });
-  }, []);
+  }, [coinId]);
 
   return (
     <div className="container">
