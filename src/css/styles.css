@@ -1,75 +1,92 @@
 body {
   /* overflow: hidden; */
-  background:linear-gradient(120deg, #852057, #553a99, #6cbc35, #fd9f3e, #08538c) !important;
-  }
-  .img-logo {
-    width: 140px;
-    /* margin-left: 10px; */
-  }
-  
-  .btn-coin {
-    border-radius: 10em;
-    background: rgb(24, 198, 131) none repeat scroll 0% 0% !important;
-    transition: transform 0.2s ease 0s;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 15px -3px;
-    color: #fff;
-    text-shadow: none;
-    padding: 5px 20px;
-    font-weight: bold;
-  }
-  
-  .btn-coin:hover {
-    transform: translateY(-2px);
-    color: #fff;
-    text-shadow: none;
-  }
-  
-  .table-coin {
-    border-radius: 10px;
-    box-shadow: 0px 7px 15px 0px #a7a7a7;
-    padding: 10px;
-    background: rgb(236, 239, 241) none repeat scroll 0% 0%;
-  }
-  
-  .table-coin tr {
-    text-align: right;
-  }
-  
-  .text-logo {
-    text-align: left;
-  }
+  background: linear-gradient(-120deg, #339966, #0063bf, #990000);
+  min-height: 100vh;
+}
 
-  .img-icon {
-    width: 30px;
-  }
+.img-logo {
+  width: 140px;
+  /* margin-left: 10px; */
+}
 
-  .card-login {
-    display: flex;
-    min-height: 500px;
-    justify-content: center;
-    align-items: center;
-  }
+.nav {
+  background-color: #dad6d1;
+  position: sticky !important;
+  top: 0;
+}
 
-  .card-login img {
-    width: 300px;
-  }
+.link-cerrar-sesion {
+  color: #ffffff !important;
+  background-color: #cf6767;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #926969;
+  margin-left: 10px;
+}
 
-  .google-bg {
-    background-color: #7257b8;
-  }
+.btn-coin {
+  border-radius: 10em;
+  background: rgb(26, 199, 132) none repeat scroll 0% 0% !important;
+  transition: transform 0.2s ease 0s;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 15px -3px;
+  color: #fff;
+  text-shadow: none;
+  padding: 5px 20px;
+  font-weight: bold;
+}
 
-  .logo-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .logo-icon img {
-    width: 150px;
-    height: 150px;
-  }
-  
-  .img_avatar {
-    width: 40px;
-    border-radius: 100%;
-  }
+.btn-coin:hover {
+  transform: translateY(-2px);
+  color: #fff;
+  text-shadow: none;
+}
+
+.table-coin {
+  border-radius: 10px;
+  box-shadow: 0px 7px 15px 0px #a7a7a7;
+  padding: 10px;
+  background: rgb(224, 229, 231) none repeat scroll 0% 0%;
+}
+
+.table-coin tr {
+  text-align: right;
+}
+
+.text-logo {
+  text-align: left;
+}
+
+.img-icon {
+  width: 30px;
+}
+
+.card-login {
+  display: flex;
+  min-height: 500px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-login img {
+  width: 300px;
+}
+
+.google-bg {
+  background:linear-gradient(45deg, #66aa33, #99cc33, #41811e, #222222, #666666, #e8e8e8);
+}
+
+.logo-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-icon img {
+  width: 150px;
+  height: 150px;
+}
+
+.img_avatar {
+  width: 40px;
+  border-radius: 100%;
+}

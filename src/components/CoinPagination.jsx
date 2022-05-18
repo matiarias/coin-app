@@ -28,20 +28,20 @@ const CoinPagination = (props) => {
         <nav>
             <ul className="pagination justify-content-center">
                 <li className={pagina < 10 ? "page-item disabled" : "page-item"}>
-                    <button className="page-link" onClick={prevPage}>Previous</button>
+                    <button className="page-link text-dark" onClick={prevPage}>Previous</button>
                 </li>
 
                 {
                     pagination.map((pag, index) => (
 
                         <li key={index} className={pag*10 === pagina ? "page-item active" : "page-item"}>
-                            <button className="page-link" onClick={() => setPagina(pag*10)}>{pag+1}</button>
+                            <button className="page-link text-dark" onClick={() => setPagina(pag*10)}>{pag+1}</button>
                         </li>
                     ))
                 }
 
                 <li className={pagina === 90 ? "page-item disabled" : "page-item"}>
-                    <button className="page-link" onClick={nextPage}>Next</button>
+                    <button className="page-link text-dark" onClick={nextPage}>Next</button>
                 </li>
             </ul>
         </nav>
