@@ -5,7 +5,7 @@ import CoinSearch from './CoinSearch'
 
 const CoinNav = () => {
     return (
-        <nav className='navbar navbar-expand-lg nav'>
+        <nav className='navbar navbar-expand-lg nav '>
             <div className='container justify-content-between'>
                 <div>
                     <Link to='/'>
