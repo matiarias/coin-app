@@ -1,12 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { useEffect } from "react";
 import LoginForm from "../components/LoginForm";
-// import LoginGoogle from "../components/LoginGoogle";
+import LoginGoogle from "../components/LoginGoogle";
 import logo from "../img/coincap.png";
 
 const LoginScreen = () => {
   useEffect(() => {
     localStorage.removeItem("auth");
-    localStorage.removeItem("user");
+    // localStorage.removeItem("user");
   }, []);
 
   return (
@@ -23,8 +24,8 @@ const LoginScreen = () => {
               {<LoginForm />}
             </div>
 
-            <div className="text-center google-bg py-3">
-              {/* <LoginGoogle /> */}
+            <div className="d-flex justify-content-center google-bg py-3">
+              <LoginGoogle />
             </div>
           </div>
         </div>
