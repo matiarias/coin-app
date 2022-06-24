@@ -6,24 +6,23 @@ import { useState } from "react";
 
 const LoginGoogle = () => {
   const [user, setUser] = useState({});
-
   let navigate = useNavigate();
 
-  const handleCallbackResponse = (response) => {
-    // console.log("JWT ID token:" + response.credential);
-    var userObject = jwt_decode(response.credential);
-    console.log(userObject);
-    setUser(userObject);
-    if (user) {
-      console.log("Usuario Logueado con Google");
-      localStorage.setItem("auth", JSON.stringify(userObject.email));
-      navigate("/");
-    } else {
-      console.log("Error en el logueo con google");
-    }
-  };
-
   useEffect(() => {
+    const handleCallbackResponse = (response) => {
+      // console.log("JWT ID token:" + response.credential);
+      var userObject = jwt_decode(response.credential);
+      console.log(userObject);
+      setUser(userObject);
+      if (user) {
+        console.log("Usuario Logueado con Google");
+        localStorage.setItem("auth", JSON.stringify(userObject.email));
+        navigate("/");
+      } else {
+        console.log("Error en el logueo con google");
+      }
+    };
+
     /* global google */
     google.accounts.id.initialize({
       client_id:
