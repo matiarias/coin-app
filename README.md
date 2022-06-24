@@ -2,7 +2,7 @@
 
 Esta aplicacion fue creada con la API de CoinCap API 2.0. La cual nos muestra las top 10 criptomonedas del mercado.
 
-## Pagina: app-coin
+## Pagina: https://crypto-coincap-app.netlify.app
 
 ### Pasos para poder probar la web
 
